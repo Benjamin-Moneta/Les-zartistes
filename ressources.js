@@ -58,10 +58,10 @@ function createCard(title, imageUrl, date, text, lienUrl) {
   cardText.classList.add("card-text");
   cardBody.appendChild(cardText);
   
-  const cardButton = document.createElement("button");
-  cardButton.innerHTML = `url(${lienUrl})`;
+  const cardButton = document.createElement("a");
+  cardButton.href = lienUrl;
   cardButton.textContent = "En savoir plus";
-  cardButton.classList.add("button");
+  cardButton.classList.add("card-link");
   cardBody.appendChild(cardButton);
 }
 
