@@ -61,7 +61,7 @@ function createCard(title, imageUrl, date, text, lienUrl) {
   const cardButton = document.createElement("a");
   cardButton.href = lienUrl;
   cardButton.textContent = "En savoir plus";
-  cardButton.classList.add("card-link");
+  cardButton.classList.add("card-button");
   cardBody.appendChild(cardButton);
 }
 
@@ -74,27 +74,49 @@ const cards2 = document.querySelector(".cards2");
 
 const artistes = [
   {
-    name: "Jess Blod",
-    picture: "https://placekitten.com/200/287"
+    name: "Jadikan",
+    picture: "img/jadikanportrait.jpg",
+    residence:"Résidence : Isère",
+    logo1Url:"img/facebook.png",
+    logo2Url:"img/vimeo.png",
+    lienUrllogo1:"https://www.facebook.com/Jadikan-Artist-305532205418/",
+    lienUrllogo2:"https://vimeo.com/jadikanlp/",
+    lienUrlsiteweb:"https://www.jadikan-lp.com/"
   },
   {
-    name: "Loola",
-    picture: "https://placekitten.com/200/139"
+    name: "Chanette Manso",
+    picture: "img/chanetteManso.jpg",
+    residence:"Résidence : Paris",
+    logo1Url:"img/facebook.png",
+    logo2Url:"img/youtube.jpeg",
+    lienUrllogo1:"https://www.facebook.com/chanette.manso",
+    lienUrllogo2:"https://www.youtube.com/channel/UCbHir9SRQCXen4Cpd1PCzlA",
+    lienUrlsiteweb:"https://chanettemanso.com/"
   },
   {
-    name: "Romain",
-    picture: "https://placekitten.com/200/90"
+    name: "Tim Marsh",
+    picture: "img/TimMarsh.jpg",
+    residence:"Résidence : Val d’Oise",
+    logo1Url:"img/facebook.png",
+    logo2Url:"img/youtube.jpeg",
+    lienUrllogo1:"https://www.facebook.com/TimMarshArtworks?ref=bookmarks",
+    lienUrllogo2:"https://www.youtube.com/watch?v=t2tu4a1-ULs",
+    lienUrlsiteweb:"https://www.t-marsh.com/"
   },
   {
-    name: "Patrick",
-    picture: "https://placekitten.com/200/194"
-  },
-  {
-    name: "Ben",
-    picture: "https://placekitten.com/200/179"
+    name: "Alexis Pichot",
+    picture: "img/alexispichot.jpeg",
+    residence:"Résidence : Paris",
+    logo1Url:"img/facebook.png",
+    logo2Url:"img/insta.jpg",
+    lienUrllogo1:"https://www.facebook.com/alexispichotphotographe/",
+    lienUrllogo2:"https://www.instagram.com/alexis_pichot/",
+    lienUrlsiteweb:"https://www.alexispichot.com/"
   }
+
 ];
-function createCard2(title2, imageUrl) {
+
+function createCard2(title2, imageUrl, residence, lienUrlsiteweb, logo1Url, logo2Url, lienUrllogo1, lienUrllogo2) {
   const card2 = document.createElement("div");
   card2.classList.add("card2");
   cards2.appendChild(card2);
@@ -117,12 +139,35 @@ function createCard2(title2, imageUrl) {
   cardTitle2.classList.add("card-title2");
   cardBody2.appendChild(cardTitle2);
 
-  const cardButton2 = document.createElement("button");
-  cardButton2.textContent = "Site web";
+  const cardLieu2 = document.createElement("p")
+  cardLieu2.innerHTML = residence;
+  cardLieu2.classList.add("card-lieu2");
+  cardBody2.appendChild(cardLieu2);
+  
+  const cardButton2 = document.createElement("a");
+  cardButton2.href = lienUrlsiteweb;
+  cardButton2.textContent = "Découvrir ses réalisations";
   cardButton2.classList.add("card-button2");
   cardBody2.appendChild(cardButton2);
+
+  const reseauxSociaux = document.createElement ("div");
+  reseauxSociaux.classList.add("reseaux-sociaux")
+  cardBody2.appendChild(reseauxSociaux)
+
+  const cardLogo1 = document.createElement ("a");
+  cardLogo1.style.backgroundImage = `url(${logo1Url})`;
+  cardLogo1.href = lienUrllogo1;
+  cardLogo1.classList.add("card-logo1")
+  reseauxSociaux.appendChild(cardLogo1)
+
+  const cardLogo2 = document.createElement ("a");
+  cardLogo2.style.backgroundImage = `url(${logo2Url})`;
+  cardLogo2.href = lienUrllogo2;
+  cardLogo2.classList.add("card-logo2")
+  reseauxSociaux.appendChild(cardLogo2)
+
 }
 
 for (let j = 0; j < artistes.length; j++) {
-  createCard2(artistes[j].name, artistes[j].picture);
+  createCard2(artistes[j].name, artistes[j].picture, artistes[j].residence, artistes[j].lienUrlsiteweb, artistes[j].logo1Url, artistes[j].logo2Url, artistes[j].lienUrllogo1, artistes[j].lienUrllogo2);
 }
