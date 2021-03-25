@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    </header>
 
+    <h1>Contacte-moi !</h1>   
+<section class = "form">
+
+
+    <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+        <table class="form-style">
+           <tr>
+              <td>
+                 <label>
+                    Votre nom <span class="required">*</span>
+                 </label>
+              </td>
+              <td>
+                 <input type="text" name="name" class="long"/>
+              </td>
+           </tr>
+           <tr>
+              <td>
+                 <label>
+                    Votre adresse<br> e-mail <span class="required">*</span>
+                 </label>
+              </td>
+              <td>
+                 <input type="email" name="email" class="long"/>
+              </td>
+           </tr>
+           <tr>
+              <td>
+                 <label>
+                    Message <span class="required">*</span>
+                 </label>
+              </td>
+              <td>
+                 <textarea name="message" class="long field-textarea"></textarea>
+              </td>
+           </tr>
+           <tr>
+              <td></td>
+              <td>
+                 <input type="submit" value="Envoyer">      
+                 <input type="reset" value="Réinitialiser"> 
+              </td>
+            </tr>
+        </table>
+        <p>* champs<br>obligatoires</p>
+    </form>
+   </section>
+
+   <h2>Les auteurs de ce site :</h2>
+   
+   <h3>Les Zartistes de la Wild Code School de la Loupe, promotion 2021.</h3>
+   
+   <section class = "form2">
+    <div class="cards">
+        <div class="logopromo"></div>
+        <h4 class="card-name">Benjamin Moneta, Marie-Hélène Trillat et Claire Francigny.</h4>
+                    <div class="card-body">
+                        <div class="photomédaillon1"></div>
+                        <div class="photomédaillon2"></div>
+                        <div class="photomédaillon3"></div>
+                    </div>
+    </div>
+   </section>
+
+    <script src="contact.js"></script>
+
+</body>
+</html>
