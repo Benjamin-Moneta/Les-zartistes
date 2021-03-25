@@ -1,1 +1,416 @@
 
+
+* {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.col1 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: repeat(1, 2fr);
+  float : left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    color: black;
+    font-family: 'Acme';
+    align-items: center;
+    text-align: center;
+    
+  }
+  header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  p1{
+    margin: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: justify;
+    text-align: center;
+  }
+
+  .cards {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    border-radius: 20px;
+    width: 300px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(18, 2, 44, 0.2) 20px 25px 24px;
+    background-color: #a6a6a6
+  }
+
+  .card-img {
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(18, 2, 44, 0.2) 0px 5px 5px;
+    background-image: url("https://i1.wp.com/www.lightzoomlumiere.fr/wp-content/uploads/2015/04/Light-Painting-lumieres-dans-espace-exposition-extrait-affiche-1.jpg?w=1200&ssl=1");
+    height: 200px;
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 10px 20px;
+  }
+
+  .card-title {
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgb(21, 56, 66);
+    height: 100px;
+  }
+
+  .card-date {
+    padding: 10px 20px;
+  }
+  
+  .card-text {
+    padding: 10px 20px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .card-button {
+    border: none;
+    border-radius: 10px;
+    height: 40px;    
+    width: 50%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin : auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    text-decoration:none; 
+  }
+  
+  .col2 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-columns: repeat(1, 2fr);
+    float : right;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cards2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card2 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-img2 {
+    border-radius: 50% 20% / 10% 40%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/GhislainDecq.jpg");
+    height: 200px;
+    width: 100%;
+  }
+
+  .card-body2 {
+
+  }
+
+  .card-title2 {
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgb(21, 56, 66);
+    height: 20px;
+  }
+  .card-lieu2 {
+    text-align: center;
+  }
+  .card-button2 {
+    border: none;
+    border-radius: 10px;
+    height: 60px;    
+    width: 50%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin : auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    text-decoration:none; 
+  }
+  .reseaux-sociaux {
+    margin : auto;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .card-logo1 {
+    background-image: url("img/facebook.png");
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 25%;
+  }
+  .card-logo2 {
+    background-image: url("img/pinterest.png");
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 30%;
+  }
+
+
+@media screen and (max-width: 414px) { 
+
+.col1 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: repeat(1, 2fr);
+  float : left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    color: black;
+    font-family: 'Acme';
+    align-items: center;
+    text-align: center;
+    
+  }
+  header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  p1{
+    margin: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: justify;
+  }
+
+  .cards {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    border-radius: 20px;
+    width: 300px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(18, 2, 44, 0.2) 20px 25px 24px;
+    background-color: #a6a6a6
+  }
+
+  .card-img {
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(18, 2, 44, 0.2) 0px 5px 5px;
+    background-image: url("https://i1.wp.com/www.lightzoomlumiere.fr/wp-content/uploads/2015/04/Light-Painting-lumieres-dans-espace-exposition-extrait-affiche-1.jpg?w=1200&ssl=1");
+    height: 200px;
+    width: 100%;
+  }
+
+  .card-body {
+    padding: 10px 20px;
+    
+  }
+
+  .card-title {
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgb(21, 56, 66);
+    height: 100px;
+  }
+
+  .card-date {
+    padding: 10px 20px;
+  }
+  
+  .card-text {
+    padding: 10px 20px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .card-button {
+    border: none;
+    border-radius: 10px;
+    height: 40px;    
+    width: 50%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin : auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    text-decoration:none; 
+  }
+
+
+hr:after {
+    background: rgb(223, 221, 221);
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+  .col2 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-columns: repeat(1, 2fr);
+    float : right;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card2 {
+    border-radius: 10px;
+    width: 250px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-img2 {
+    border-radius: 50% 20% / 10% 40%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/GhislainDecq.jpg");
+    height: 200px;
+    width: 100%;
+  }
+
+  .card-body2 {
+
+  }
+
+  .card-title2 {
+    margin: 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
+    text-align: center;
+    text-shadow: 0px 5px 10px rgb(21, 56, 66);
+    height: 20px;
+  }
+  .card-lieu2 {
+    text-align: center;
+  }
+  .card-button2 {
+    border: none;
+    border-radius: 10px;
+    height: 60px;    
+    width: 50%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin : auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    text-decoration:none; 
+  }
+  .reseaux-sociaux {
+    margin : auto;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .card-logo1 {
+    background-image: url("img/facebook.png");
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 25%;
+  }
+  .card-logo2 {
+    background-image: url("img/pinterest.png");
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90px;
+    width: 30%;
+  }
+
+}
