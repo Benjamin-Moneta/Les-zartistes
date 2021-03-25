@@ -1,16 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Light Painting</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-</head>
-<body>
-    <p>ceci est un test</p>
-    <h1>test</h1>
-</body>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="favicon.ico" href="img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="index.html">HOME</a>
+          <a href="galerie.html">GALERIE</a>
+          <a href="ressources.html">RESSOURCES</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+      </div>
+      <span class="openbtn" onclick="openNav()">&#9776;</span>
+      <section class="sectionT">
+        <h1 class="titlepage">Le Light Painting</h1>
+      </section>
+    </header>
+    <section class="container">
+      <img class="romainM" src="img/romainmillet.jpg" alt="romain millet" />
+      <section class="sectionHP">
+        <h2 class="titleHP">A propos de lui...</h2>
+        <p class="biographie">
+          Rom Light Painting, ou bien Romain Millet, je suis photographe
+          spécialisé en light painting résidant à Lyon. Je suis né en 1982 à
+          Avignon, j'ai habité différentes villes du sud-est de la France avant
+          de m'installer à Lyon, en 2005. <br />
+          J'ai toujours aimé faire des photos, immorataliser des instants, mais
+          en 2009 je découvre cet art photographique en achetant mon premier
+          "vrai" reflex, dans l'idée d'accrocher mon propre tirage de coucher de
+          soleil ou de voie lactée au dessus de mon lit. <br />
+          Cette idée m'amena à approfondir des connaissances, notamment à
+          travers des magazines et le web. C'est là, en admirant et apprenant
+          divers techniques photographiques, que je tombe sur des clichés de
+          light painting réalisés par Cenci Goepel et Jens Warnecke, un couple
+          de photographes, plus connus sous le pseudonyme Lightmark.
+        </p>
+      </section>
+    </section>
+    <section class="sectionBP">
+      <h2 class="titleBP">Qu'est ce que le Light Painting ?</h2>
+      <p class="biolight">
+        Littéralement, le "Light Painting" revient à peindre une photo avec de
+        la lumière. Concrètement, cette technique de photographique moderne
+        consiste à réaliser des effets d'éclairages et dessins lumières. <br />
+        Pour réaliser ces clichés, on se place dans un environnement sombre ou
+        ne répresentant pas de sources de lumières trop puissantes, on réalise
+        ensuite les photos en réglant l'appareil photo en exposition longue.
+        <br />
+        Le terme "Light Painting" recouvre un ensemble de variantes et de
+        techniques qui permettent de réaliser des photos dont l'aspect est
+        largement déterminé par le jeu de lumières produit pendant le temps
+        d'exposition. Par exemple, dans le cas des trainées lumineuses, on parle
+        de "Light Painting" car cet exercice s'apparente au graffiti avec bombe
+        aérosol.
+      </p>
+    </section>
+    <script src="index.js"></script>
+  </body>
 </html>
