@@ -9,7 +9,9 @@ div {
     text-align: center;
 }
 
-div.carte1 {
+
+
+.carte {
     width: 400px;
     height: 400px;
     margin-top: 100px;
@@ -20,37 +22,16 @@ div.carte1 {
     
 }
 
-div.carte2 {
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(#ffffff,#a6a6a6);
-    border-radius: 10%;
-    
-}
-
-div.carte3 {
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(#ffffff,#a6a6a6);
-    border-radius: 10%;
-    
-}
 
 img {
-	max-width: 100%;
-    width: 400px;
+	width: 100%;
+   
     border-radius: 20px;
     display: block;
     margin: 0 auto;
 }
 
-#texte {
+.texte {
     text-align: center;
     margin-right: 50px;
     width: 100%;
@@ -72,14 +53,15 @@ div.galerie-img {
 }
 
 div.cartes-galerie {
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     background: linear-gradient(#ffffff,#a6a6a6);
     border-radius: 10%;
     display: inline-block;
+    
     
     }
 
@@ -88,40 +70,33 @@ div.cartes-galerie {
    justify-content: center;
 }
 
-.carte1 {
-    float: left;
+
+.carte {
+  transition: 1s ease;
+ 
 }
 
-.carte2 {
-    float: left;
+.carte section {
+    position: absolute;
+    display: none;
+    justify-content: space-around;
+    width: 30vw;
 }
 
-.carte3 {
-    float: left;
+.bouton1, .bouton2 {
+    border-radius: 100%;
+    height: 2.5vh;
+    background-color: #000;
+    color: #fff;
+
 }
 
-/* .carousel-container::after {
-    content: "";
-    clear: both;
-    display: table;
+.galerie {
+    display: flex;
+    flex-wrap:wrap;
 }
 
-.carousel-next, .carousel-prev {
-    width: 40px;
-    height: 40px;
-    background-color: #fff url(right.svg) center center no-repeat;
-    background-size: 20px 20px;
-    border-radius: 50%;
-    top: 50%;
-    margin-top: -20px;
-    right: -20px;
-    cursor: pointer;
-}
 
-.carousel-prev {
-    right: auto;
-    left: -20px;
-} */
 
 @media screen and (max-width: 414px) { 
 
@@ -129,7 +104,7 @@ div {
     text-align: center;
 }
 
-.carte1 {
+.carte {
     height: auto;
     margin-top: 100px;
     background: linear-gradient(#ffffff,#a6a6a6);
@@ -137,21 +112,6 @@ div {
     max-width: 50%;       
     }
 
-.carte2 {
-    height: auto;
-    margin-top: 100px;
-    background: linear-gradient(#ffffff,#a6a6a6);
-    border-radius: 10%; 
-    max-width: 50%;       
-        }
-
-.carte3 {
-    height: auto;
-    margin-top: 100px;
-    background: linear-gradient(#ffffff,#a6a6a6);
-    border-radius: 10%; 
-    max-width: 50%;       
-            }
 
 
 
@@ -170,13 +130,24 @@ div {
     background: linear-gradient(#ffffff,#a6a6a6);
     border-radius: 10%; 
     max-width: 100%;
+    display: flex;
 }
 
-#texte {
+.texte {
     text-align: center;
     margin-right: 50px;
     margin-bottom: 25px;
     width: 100%;
+}
+
+.carte {
+    width: 80vw;
+
+}
+
+.carousel {
+    width: 300%;
+    transform: translateX(-96vw);
 }
     }
 
