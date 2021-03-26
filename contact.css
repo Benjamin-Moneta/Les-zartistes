@@ -1,336 +1,393 @@
-    h1{
-      text-align: center;
-      font-family: Acme;
-    }
-    form{
-      background-image: url("img/romainmillet.jpg");
-      border-radius: 20px;
-      opacity:0.85;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      max-width: 100%;
-      height: auto;
-      color: #ffff;
-    }
-    @media screen and (min-width: 840px) { 
-      form{ 
-        max-width: 30%; 
-      } 
-      .form{
-        display: flex;
-        justify-content: center;
-      }
-    }
-    
-    .form-style {
-      margin:10px auto;
-      width: 400px;
-      padding: 20px 12px 10px 20px;
-      font: 14px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .form-style td {
-      padding: 0;
-      display: block;
-      list-style: none;
-      margin: 10px 0 0 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .form-style label{
-      margin:0 0 3px 0;
-      padding:0px;
-      display:block;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .form-style input[type=submit], .form-style input[type=reset]{
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 8px 15px 8px 15px;
-      border: none;
-      color: rgb(0, 0, 0);
-      font-weight: bold;
-    }
-    .form-style .field-textarea{
-      height: 100px;
-    }
-    .form-style input[type=text], 
-    .form-style input[type=email],
-    textarea{
-      box-sizing: border-box;
-      border-radius: 20px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      border:1px solid #ffffff;
-      padding: 7px;
-      margin:0px;
-      -webkit-transition: all 0.30s ease-in-out;
-      -moz-transition: all 0.30s ease-in-out;
-      -ms-transition: all 0.30s ease-in-out;
-      -o-transition: all 0.30s ease-in-out;
-      outline: none;  
-      background: #ffffff;
-      opacity:0.4;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .form-style .long{
-      width: 100%;             
-    }
-    
-    p{
-      margin: 10px 20px;
-      font: 14px;
-      font-family: Arial, Helvetica, sans-serif;   
-      text-align: right;
-      color: #ffffff;
-      text-shadow: 10px 5px 10px #000000;
-      }
+.openbtn {
+  font-size: 35px;
+  cursor: pointer;
+}
 
-      h2{
-        text-align: center;
-        font-family: Acme;
-        color: #a6a6a6;
-      }
-      h3{
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #a6a6a6;
-        font-weight: lighter;
-      }
-      h4{
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #ffffff;
-        font-weight: lighter;
-      }
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
 
-         
-      .cards {
-        border-radius: 20px;
-        background-color: #a6a6a6
-      }
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
 
-      @media screen and (min-width: 840px) { 
-      .cards{ 
-          max-width: 100%; 
-        } 
-        .form2{
-          display: flex;
-          justify-content: center;
-        }
-      }
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-      .logopromo {
-        background-size: cover;
-        background-position: center;
-        height: 200px;
-        width: 100%;
-        background-image: url("img/écusson.png");
-      }
-      .card-body {
-      margin : auto;
-      text-align: center;
-      vertical-align: middle;
-     }
-     
-      .photomédaillon1 {
-        background-position: center;
-        display: inline-block;
-        background-size: cover;
-        background-image: url("img/Benjamin.jpg");
-        -webkit-border-radius:50px;
-        -moz-border-radius:50px;
-        border-radius:50px;
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        vertical-align: middle;
-      }
-      .photomédaillon2 {
-        background-position: center;
-        display: inline-block;
-        background-size: cover;
-        background-image: url("img/MarieHélène.jpg");
-        -webkit-border-radius:50px;
-        -moz-border-radius:50px;
-        border-radius:50px;
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        vertical-align: middle;
-      }
-      .photomédaillon3 {
-        background-position: center;
-        display: inline-block;
-        background-size: cover;
-        background-image: url("img/Claire.jpg");
-        -webkit-border-radius:50px;
-        -moz-border-radius:50px;
-        border-radius:50px;
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        vertical-align: middle;
-      }
-  
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: Acme;
+}
+form {
+  background-image: url("img/romainmillet.jpg");
+  border-radius: 20px;
+  opacity: 0.85;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  color: #ffff;
+}
+@media screen and (min-width: 840px) {
+  form {
+    max-width: 30%;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form-style {
+  margin: 10px auto;
+  width: 400px;
+  padding: 20px 12px 10px 20px;
+  font: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form-style td {
+  padding: 0;
+  display: block;
+  list-style: none;
+  margin: 10px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form-style label {
+  margin: 0 0 3px 0;
+  padding: 0px;
+  display: block;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-style input[type="submit"],
+.form-style input[type="reset"] {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 8px 15px 8px 15px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.form-style .field-textarea {
+  height: 100px;
+}
+.form-style input[type="text"],
+.form-style input[type="email"],
+textarea {
+  box-sizing: border-box;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #ffffff;
+  padding: 7px;
+  margin: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  background: #ffffff;
+  opacity: 0.4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form-style .long {
+  width: 100%;
+}
+
+p {
+  margin: 10px 20px;
+  font: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  color: #ffffff;
+  text-shadow: 10px 5px 10px #000000;
+}
+
+h2 {
+  text-align: center;
+  font-family: Acme;
+  color: #a6a6a6;
+}
+h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a6a6a6;
+  font-weight: lighter;
+}
+h4 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+.cards {
+  border-radius: 20px;
+  background-color: #a6a6a6;
+}
+
+@media screen and (min-width: 840px) {
+  .cards {
+    max-width: 100%;
+  }
+  .form2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.logopromo {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+  background-image: url("img/écusson.png");
+}
+.card-body {
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.photomédaillon1 {
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("img/Benjamin.jpg");
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  vertical-align: middle;
+}
+.photomédaillon2 {
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("img/MarieHélène.jpg");
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  vertical-align: middle;
+}
+.photomédaillon3 {
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("img/Claire.jpg");
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  vertical-align: middle;
+}
 
 @media screen and (max-width: 414px) {
 
-    h1{
-        text-align: center;
-        font-family: Acme;
-      }
-      form{
-        background-image: url("img/romainmillet.jpg");
-        border-radius: 20px;
-        opacity:0.85;
-        background-repeat: no-repeat;
-        background-position:center center;
-        background-size: cover;
-        max-width: 100%;
-        height: auto;
-        color: #ffff;
-      }
-      
-      .form-style {
-        margin:10px auto;
-        width: 400px;
-        padding: 20px 12px 10px 20px;
-        font: 14px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .form-style td {
-        padding: 0;
-        display: block;
-        list-style: none;
-        margin: 10px 0 0 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .form-style label{
-        margin:0 0 3px 0;
-        padding:0px;
-        display:block;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      
-      .form-style input[type=submit], .form-style input[type=reset]{
-        background: #ffffff;
-        border-radius: 20px;
-        padding: 8px 15px 8px 15px;
-        border: none;
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-      }
-      .form-style .field-textarea{
-        height: 100px;
-      }
-      .form-style input[type=text], 
-      .form-style input[type=email],
-      textarea{
-        box-sizing: border-box;
-        border-radius: 20px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        border:1px solid #ffffff;
-        padding: 7px;
-        margin:0px;
-        -webkit-transition: all 0.30s ease-in-out;
-        -moz-transition: all 0.30s ease-in-out;
-        -ms-transition: all 0.30s ease-in-out;
-        -o-transition: all 0.30s ease-in-out;
-        outline: none;  
-        background: #ffffff;
-        opacity:0.4;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .form-style .long{
-        width: 100%;             
-      }
-      
-      p{
-        margin: 10px 20px;
-        font: 14px;
-        font-family: Arial, Helvetica, sans-serif;   
-        text-align: right;
-        color: #ffffff;
-        text-shadow: 10px 5px 10px #000000;
-        }
+  .overlay a {
+    font-size: 50px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 
-        h2{
-          text-align: center;
-          font-family: Acme;
-          color: #a6a6a6;
-        }
-        h3{
-          text-align: center;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #a6a6a6;
-          font-weight: lighter;
-        }
-        h4{
-          text-align: center;
-          font-family: Arial, Helvetica, sans-serif;
-          color: #ffffff;
-          font-weight: lighter;
-        }
-        .cards {
-          border-radius: 20px;
-          background-color: #a6a6a6
-        }
+  h1 {
+    text-align: center;
+    font-family: Acme;
+  }
+  form {
+    background-image: url("img/romainmillet.jpg");
+    border-radius: 20px;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    color: #ffff;
+  }
 
-        .logopromo {
-          background-size: cover;
-          background-position: center;
-          height: 200px;
-          width: 100%;
-          background-image: url("img/écusson.png");
-        }
-        .card-body {
-        margin : auto;
-        text-align: center;
-        vertical-align: middle;
-       }
-       
-        .photomédaillon1 {
-          background-position: center;
-          display: inline-block;
-          background-size: cover;
-          background-image: url("img/Benjamin.jpg");
-          -webkit-border-radius:50px;
-          -moz-border-radius:50px;
-          border-radius:50px;
-          width: 120px;
-          height: 120px;
-          margin: auto;
-          vertical-align: middle;
-        }
-        .photomédaillon2 {
-          background-position: center;
-          display: inline-block;
-          background-size: cover;
-          background-image: url("img/MarieHélène.jpg");
-          -webkit-border-radius:50px;
-          -moz-border-radius:50px;
-          border-radius:50px;
-          width: 120px;
-          height: 120px;
-          margin: auto;
-          vertical-align: middle;
-        }
-        .photomédaillon3 {
-          background-position: center;
-          display: inline-block;
-          background-size: cover;
-          background-image: url("img/Claire.jpg");
-          -webkit-border-radius:50px;
-          -moz-border-radius:50px;
-          border-radius:50px;
-          width: 120px;
-          height: 120px;
-          margin: auto;
-          vertical-align: middle;
-        }
-      }
+  .form-style {
+    margin: 10px auto;
+    width: 400px;
+    padding: 20px 12px 10px 20px;
+    font: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .form-style td {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .form-style label {
+    margin: 0 0 3px 0;
+    padding: 0px;
+    display: block;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .form-style input[type="submit"],
+  .form-style input[type="reset"] {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+  .form-style .field-textarea {
+    height: 100px;
+  }
+  .form-style input[type="text"],
+  .form-style input[type="email"],
+  textarea {
+    box-sizing: border-box;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #ffffff;
+    padding: 7px;
+    margin: 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    outline: none;
+    background: #ffffff;
+    opacity: 0.4;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .form-style .long {
+    width: 100%;
+  }
+
+  p {
+    margin: 10px 20px;
+    font: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    color: #ffffff;
+    text-shadow: 10px 5px 10px #000000;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: Acme;
+    color: #a6a6a6;
+  }
+  h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a6a6a6;
+    font-weight: lighter;
+  }
+  h4 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-weight: lighter;
+  }
+  .cards {
+    border-radius: 20px;
+    background-color: #a6a6a6;
+  }
+
+  .logopromo {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    background-image: url("img/écusson.png");
+  }
+  .card-body {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .photomédaillon1 {
+    background-position: center;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("img/Benjamin.jpg");
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    vertical-align: middle;
+  }
+  .photomédaillon2 {
+    background-position: center;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("img/MarieHélène.jpg");
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    vertical-align: middle;
+  }
+  .photomédaillon3 {
+    background-position: center;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("img/Claire.jpg");
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    vertical-align: middle;
+  }
+}

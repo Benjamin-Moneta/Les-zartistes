@@ -1,20 +1,49 @@
+.openbtn {
+  font-size: 35px;
+  cursor: pointer;
+}
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
 
-* {
-  box-sizing: border-box;
+.overlay-content {
+  position: relative;
+  top: 25%;
   width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.col1 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-rows: minmax(100px, auto);
-  grid-template-columns: repeat(1, 2fr);
-  float : left;
-  display: flex;
-  flex-wrap: wrap;
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
 
   body {
     padding: 0;
@@ -36,7 +65,7 @@
     text-align: center;
   }
 
-  p1{
+  p{
     margin: 20px;
     margin-top: auto;
     margin-bottom: auto;
@@ -113,16 +142,6 @@
     text-decoration:none; 
   }
   
-  .col2 {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: minmax(100px, auto);
-    grid-template-columns: repeat(1, 2fr);
-    float : right;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
   .cards2 {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -146,10 +165,6 @@
     background-image: url("img/GhislainDecq.jpg");
     height: 200px;
     width: 100%;
-  }
-
-  .card-body2 {
-
   }
 
   .card-title2 {
@@ -207,15 +222,14 @@
 
 @media screen and (max-width: 414px) { 
 
-.col1 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-rows: minmax(100px, auto);
-  grid-template-columns: repeat(1, 2fr);
-  float : left;
-  display: flex;
-  flex-wrap: wrap;
-}
+  .overlay a {
+    font-size: 50px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 
   body {
     padding: 0;
@@ -237,7 +251,7 @@
     text-align: center;
   }
 
-  p1{
+  p{
     margin: 20px;
     margin-top: auto;
     margin-bottom: auto;
@@ -322,15 +336,6 @@ hr:after {
     position: relative;
     top: -13px;
 }
-  .col2 {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: minmax(100px, auto);
-    grid-template-columns: repeat(1, 2fr);
-    float : right;
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   .cards2 {
     margin-top: 10px;
@@ -355,10 +360,6 @@ hr:after {
     background-image: url("img/GhislainDecq.jpg");
     height: 200px;
     width: 100%;
-  }
-
-  .card-body2 {
-
   }
 
   .card-title2 {
